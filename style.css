@@ -1,0 +1,359 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+/* Enhanced Entries Section */
+.entries {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #ffffff;
+    margin: 40px auto; /* Added top and bottom margins for spacing */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow-y: auto; /* Retain vertical scrolling */
+    height: 500px; /* Increased height for better usability */
+    
+    /* Optional: Smooth scrolling */
+    scroll-behavior: smooth;
+    
+    /* Optional: Background pattern or slight texture */
+    background-image: linear-gradient(135deg, #f9f9f9 25%, #ffffff 25%, #ffffff 50%, #f9f9f9 50%, #f9f9f9 75%, #ffffff 75%, #ffffff);
+    background-size: 28.28px 28.28px; /* Adjust for desired pattern size */
+}
+
+/* Customized Scrollbar for Webkit Browsers */
+.entries::-webkit-scrollbar {
+    width: 8px;
+}
+
+.entries::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.entries::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 10px;
+    border: 2px solid #f1f1f1;
+}
+
+/* Optional: Scrollbar for Firefox */
+.entries {
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 #f1f1f1;
+}
+
+
+header {
+    top: 0%;
+    position: fixed;
+    left: 0%;
+    width: 100%;
+    padding: 20px 100px;
+    background: rgb(15, 5, 62);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.Register {
+    display: none; 
+}
+
+.logo {
+    font-size: 2em;
+    color: white;
+    user-select: none;
+    background-position: center;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    text-decoration: none;
+    color:aliceblue;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a:hover{
+    color: rgb(66, 54, 168);
+    transition: .5s;
+}
+
+.navigation .button-popup {
+    background: transparent;
+    height: 50px;
+    width: 130px;
+    outline: none;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: aliceblue;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .button-popup:hover {
+    background: rgba(255, 255, 255, .5);
+    color: rgb(15, 5, 62);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('img/book.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.fill {
+    position: relative;
+    height: 440px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: aliceblue;
+    padding: 30px 40px;
+    border-radius: 5px;
+    width: 400px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fill h1 {
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.fill .input-box {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-box {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555; /* Adjust color as needed */
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(230, 253, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: aliceblue;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: white;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: white;
+}
+
+.fill .log .rmb-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: -10px 0 15px;
+}
+
+.rmb-forgot label input {
+    accent-color: white;
+    margin-right: 3px;
+}
+
+.rmb-forgot a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.rmb-forgot a:hover {
+    text-decoration: underline;
+    color: rgb(255, 156, 156);
+}
+
+.log .button {
+    width: 100%;
+    height: 45px;
+    background: rgb(255, 255, 255);
+    color: rgb(60, 63, 63);
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.fill .log .registernow {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.fill .log .registernow p a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.fill .log .registernow p a:hover {
+    text-decoration: underline;
+    color: rgb(245, 147, 147);
+}
+
+/*Diary Styles*/
+
+/* Ensure the entire page takes up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Element Styling */
+main {
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure main takes full viewport height */
+    background: url('img/book.jpg') no-repeat center center/cover; /* Background image */
+    padding: 20px; /* Optional padding for smaller screens */
+}
+
+/* Enhanced Container Styling */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally within container */
+    align-items: center; /* Center vertically within container */
+}
+
+/* Enhanced Form Container Styling */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px; /* Increased border-radius for smoother corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Enhanced box-shadow for depth */
+    width: 100%; /* Ensure it takes full width of the container */
+    max-width: 400px; /* Maintain max-width */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Optional: Hover Effect for Form Container */
+.form-container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 500px) {
+    .form-container {
+        padding: 25px 30px; /* Reduce padding on smaller screens */
+        border-radius: 8px; /* Adjust border-radius */
+    }
+}
+
+
+form h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333333;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555555;
+}
+
+.input-group input,
+.input-group textarea {
+    padding: 10px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+.button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #357ab8;
+}
+
+.button:active {
+    background-color: #285f8a;
+}
+
+@media (max-width: 500px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    .button {
+        font-size: 1em;
+    }
+}
